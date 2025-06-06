@@ -49,7 +49,7 @@ void Logger::init(const std::string& log_path) {
 
 	std::filesystem::path abs_path = std::filesystem::absolute(log_path_obj);
 #ifdef ENABLE_LOG_VERBOSE
-	std::cout << polish("[Initialize] ", DEFAULT) + abs_path.string() + "\n";
+	std::cout << "[" + polish("Initialize", DEFAULT) + "] " + abs_path.string() + "\n";
 #endif
 }
 
