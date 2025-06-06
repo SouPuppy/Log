@@ -48,7 +48,9 @@ void Logger::init(const std::string& log_path) {
 	log_file.open(path_str, std::ios::out | std::ios::app);
 
 	std::filesystem::path abs_path = std::filesystem::absolute(log_path_obj);
+#ifdef ENABLE_LOG_VERBOSE
 	std::cout << polish("[Initialize] ", DEFAULT) + abs_path.string() + "\n";
+#endif
 }
 
 void Logger::log(const std::string& message, logger::format::LogFormat format) {
@@ -64,7 +66,6 @@ void Logger::log(const std::string& message, logger::format::LogFormat format) {
 	log_file << plain_prefix << message << std::endl;
 	log_file.flush();
 }
-
 
 std::ostream& Logger::stream() {
 	return log_file;

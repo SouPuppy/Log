@@ -7,7 +7,7 @@
 ## Features
 
 - Standard log levels:
-  - `INFO`, `WARN`, `ERROR`, `DEBUG`, `DEV_INFO`, `OK`, `FAILED`
+  - `INFO`, `WARNING`, `ERROR`, `DEBUG`, `DEV_INFO`, `OK`, `FAILED`
 - Rich terminal formatting with:
   - Text styles: **bold**, *italic*, and underline
   - 16-color ANSI support (including bright variants)
@@ -56,7 +56,7 @@ using namespace logger::log;
 int main(int argc, char *argv[]) {
 	
 	INFO("This is an informational message.");
-	WARN("This is a warning.");
+	WARNING("This is a warning.");
 	ERROR("An error has occurred.");
 	DEBUG("Debugging details.");
 	LOG("Developer-specific internal log.");
